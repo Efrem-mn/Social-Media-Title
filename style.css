@@ -4,8 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ccc;
-  font-family: "Roboto Condensed", sans-serif;
-}
+font-family: 'Arial', sans-serif;}
 
 ul {
   position: absolute;
@@ -127,4 +126,78 @@ ul li:hover:nth-child(4) a:before {
 }
 ul li:hover:nth-child(4) a:after {
   background: #6889e4;
+}
+@media (max-width: 1024px) {
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul li a {
+    width: 180px;
+    height: 70px;
+  }
+
+  ul li a .fa {
+    font-size: 34px;
+    line-height: 70px;
+  }
+
+  ul li a span {
+    top: 25px;
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+}
+@media (max-width: 768px) {
+
+  ul {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  ul li {
+    margin: 15px 0;
+  }
+
+  ul li a {
+    width: 160px;
+    height: 65px;
+    transform: rotate(-20deg) skew(15deg);
+  }
+
+  ul li a:hover {
+    transform: rotate(-20deg) skew(15deg) translate(10px, -8px);
+  }
+
+  ul li a .fa {
+    font-size: 30px;
+    line-height: 65px;
+  }
+
+  ul li a span {
+    top: 22px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+
+  ul li a {
+    width: 140px;
+    height: 60px;
+  }
+
+  ul li a .fa {
+    font-size: 26px;
+    line-height: 60px;
+  }
+
+  ul li a span {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
 }
